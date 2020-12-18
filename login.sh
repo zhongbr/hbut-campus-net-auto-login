@@ -18,7 +18,6 @@ then
 	if [[ -n "$success" ]]
 	then
 		echo '认证成功';
-		curl -s "https://sc.ftqq.com/SCU116664Tbab39aa6411e162e0000db90958dcc605f7ac77f2d1e8.send?text=%E7%BD%91%E8%B7%AF%E4%B8%AD%E6%96%AD%E4%BA%86%E4%B8%80%E4%B8%8B%E4%B8%8B%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D%E6%88%90%E5%8A%9F%EF%BC%81"
 	else
 		echo "认证失败，"$login_resp|grep -Eo "\"message\":\".*?\","|grep -Eo ":\".*?\""|grep -Eo "\".*?\""|grep -Eo "[^\"]+";
 	fi
